@@ -1,7 +1,13 @@
 # AEScript
-Adobe After Effects Script
 
-Adobe After Effectsで使えるjavascript勉強用のリポジトリ
+## 01_alert
+アラートの表示。デバッグなどにも利用できる。
 
-## 実装メモ
-エフェクト上の不透明度は0～255の設定範囲
+## 02_create_comp
+コンポジションの作成
+
+## 03_for_include
+インクルードサンプル
+
+## 04check_software
+AEのみで起動
