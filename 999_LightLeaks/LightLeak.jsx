@@ -7,7 +7,7 @@
         return rand;
     }
 
-    function LightLeakBasic(){
+    var lightLeakinit = function LightLeakBasic(){
         var LightLeakNull = actComp.layers.addSolid([0, 0, 0], "LightLeaks", 2000, 1500, 1.0);//平面の作成
         var fractalNoize;
         
@@ -20,11 +20,12 @@
         fractalNoize.property("ADBE Fractal Noise-0010").setValue(randRange(1200,1600));//スケールを1200～1600の間でランダムに
         fractalNoize.property("ADBE Fractal Noise-0015").setValue(1);//複雑度を1に
         fractalNoize.property("ADBE Fractal Noise-0023").expression = "time*"+randRange(100,300);//展開のエクスプレッションを100～300の間でランダムに
+        fractalNoize.property("ADBE Fractal Noise-0027").setValue(randRange(30,90));//ランダムシード値の変更
         //setValue()
     }
 
     if(actComp != null){
-        LightLeakBasic();
+        var l = new lightLeakinit();
     }else{
         alert("コンポを選択してください");
     }
