@@ -1,7 +1,7 @@
 ﻿{
     /*settings*/
     var vers = "0.1";
-    var uiSetting = new Window("palette","コンポジションサイズ変更");
+    var uiPalette = new Window("palette","コンポジションサイズ変更");
     var s = buildUI();
     start();//scriptの起動
 
@@ -36,16 +36,16 @@
 
     function buildUI() {
         //ポップアップの設定
-        uiSetting.orientation = "row";
-        uiSetting.ui_compWidth = uiSetting.add("edittext",[89,177,166,199],"幅");
-        uiSetting.ui_compHeight = uiSetting.add("edittext",[89,177,166,199],"高さ");
-        uiSetting.ui_btn = uiSetting.add("button",undefined,"変更");
-        uiSetting.ui_btn.onClick = function () {doMain(this.parent);};
-        uiSetting.ui_allbtn = uiSetting.add("button",undefined,"すべて変更");
-        uiSetting.ui_allbtn.onClick = function () {doAllChange(this.parent);};
-        uiSetting.ui_help = uiSetting.add("button",undefined,"ヘルプ");
-        uiSetting.ui_help.onClick = function () {Help();};
-        return uiSetting
+        uiPalette.orientation = "row";
+        uiPalette.ui_compWidth = uiPalette.add("edittext",[89,177,166,199],"幅");
+        uiPalette.ui_compHeight = uiPalette.add("edittext",[89,177,166,199],"高さ");
+        uiPalette.ui_btn = uiPalette.add("button",undefined,"変更");
+        uiPalette.ui_btn.onClick = function () {doMain(this.parent);};
+        uiPalette.ui_allbtn = uiPalette.add("button",undefined,"すべて変更");
+        uiPalette.ui_allbtn.onClick = function () {doAllChange(this.parent);};
+        uiPalette.ui_help = uiPalette.add("button",undefined,"ヘルプ");
+        uiPalette.ui_help.onClick = function () {Help();};
+        return uiPalette
     }
 
     function doMain(key_set) {
